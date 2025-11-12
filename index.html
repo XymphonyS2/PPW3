@@ -41,6 +41,29 @@
         .nav-link:hover::after {
             width: 100%;
         }
+
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .full-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -73,6 +96,37 @@
             </div>
         </div>
     </nav>
+
+    <section id="beranda" class="gradient-bg pt-32 pb-20 px-12 full-section">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                        Wujudkan Visi Kreatif
+                    </h1>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight text-yellow-300">
+                        Anda
+                    </h1>
+                    <p class="text-xl mb-8 text-gray-100">
+                        Production house profesional yang menghadirkan solusi desain dan produksi konten berkualitas tinggi untuk brand Anda
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#kontak" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition duration-300 text-center hover-scale">
+                            Mulai Proyek
+                        </a>
+                        <a href="#layanan" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition duration-300 text-center hover-scale">
+                            Lihat Layanan
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex justify-center items-center">
+                    <div class="float-animation">
+                        <img src="LITZ1.png" alt="Litz Logo" class="w-[500px] h-[500px] object-contain opacity-90">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script>
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
